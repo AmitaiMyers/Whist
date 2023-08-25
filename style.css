@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0e1d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.player {
+    width: 120px;
+    height: 120px;
+    background-color: #f9c152;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+/*.player-cards {*/
+/*    width: 400px;*/
+/*    height: 80px;*/
+/*    background-color: #d3d3d3; !* Light gray color *!*/
+/*    margin: 10px;*/
+/*}*/
+
+#middle-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 80%;
+}
+
+#board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Distribute space between card areas */
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    background-color: #9e9e9e;
+    border-radius: 15px;
+    position: relative; /* Enable positioning of card areas */
+}
+
+.player-cards {
+    position: absolute; /* Absolute positioning within #board */
+    background-color: #d3d3d3; /* Light gray color */
+}
+
+#player-top .player-cards { top: 0; left: 50%; transform: translateX(-50%); }
+#player-left .player-cards { left: 0; top: 50%; transform: translateY(-50%); rotate(90deg); }
+#player-right .player-cards { right: 0; top: 50%; transform: translateY(-50%); rotate(90deg); }
+#player-bottom .player-cards { bottom: 0; left: 50%; transform: translateX(-50%); }
